@@ -14,12 +14,10 @@ export default function GamesComponent() {
     if (isLoading) return <div>loading...</div>
     if (data === undefined) return <div>failed to load</div>
 
-    return <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    {data.map((game) => (
-        <div key={game.id} className="transform transition-all duration-300 hover:scale-105">
-            <GameItemComponent game={game}/>
-        </div>
-    ))}
-</div>
+    return <div className="mt-2 grid sm:grid-cols-2 gap-2">
+        {data.map((game) => (
+            <GameItemComponent key={game.id} game={game}/>
+        ))}
+    </div>
 }
 
