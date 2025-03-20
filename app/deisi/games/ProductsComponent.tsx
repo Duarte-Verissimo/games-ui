@@ -14,7 +14,7 @@ export default function GamesComponent() {
     if (isLoading) return <div>loading...</div>
     if (data === undefined) return <div>failed to load</div>
 
-    return <div className="mt-2 grid sm:grid-cols-2 gap-2">
+    return <div className="mt-2 grid sm:grid-cols-2 gap-2 bg-red">
         {data.map((game) => (
             <GameItemComponent key={game.id} game={game}/>
         ))}
